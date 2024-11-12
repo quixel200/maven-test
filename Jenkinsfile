@@ -20,7 +20,9 @@ pipeline{
 
         stage('Deploy'){
             steps{
-                sh 'cp target/*.war /tmp'
+                dir('quixel'){
+                    sh 'cp target/*.war /tmp'
+                    }
             }
         }
     }
